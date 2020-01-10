@@ -4,7 +4,7 @@
 # Bar configuration
 
 font0="Terminus:style=Bold:pixelsize=14"
-font1="Font Awesome 5 Free Solid:style=Solid:pixelsize=14"
+font1="Font Awesome 5 Free Solid:style=Solid:pixelsize=12"
 
 back="#03303a"
 forg="#98dbea"
@@ -16,7 +16,7 @@ power(){
 }
 
 timer(){
-	echo -n "%{F${lfor}}%{B${lbac}}$(date +"%d/%m/%Y %H:%M:%S")%{F-}%{B-}"
+	echo -n "%{F${lfor}}%{B${lbac}}$(date +"%d/%m/%Y %H:%M:%S ")%{F-}%{B-}"
 }
 main(){
 	while :;
@@ -26,8 +26,9 @@ main(){
 	done
 }
 
-main  | lemonbar -p -f "${font0}" -f "${font1}" \
-	-F "${lfor}" -B "${lbac}"| \
+main  | lemonbar -p -g x27+0+0 -o -1 \
+	-f "${font0}" -f "${font1}"      \
+	-F "${lfor}" -B "${lbac}"    |   \
 	while read line
 	do
 		case ${line} in
