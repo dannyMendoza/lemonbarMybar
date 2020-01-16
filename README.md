@@ -2,4 +2,4 @@
 
 ## Simple bar status
 
-![StatusBar](lemonbar)
+![StatusBar](lemonbar.png)
