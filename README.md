@@ -1,1 +1,3 @@
-# lemonbarMybar
+# Lemonbar
+
+## Simple bar status
